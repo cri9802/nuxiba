@@ -1,0 +1,44 @@
+<br> 
+<br>
+<div class="page-header">
+  <h1>sucursales: <small>Reporte sucursal.</small></h1>
+</div>
+<br>
+<a routerLink="/altasucursal" class="btn btn-primary ">Nuevo(s).</a>
+<br> 
+<br>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">calle</th>
+      <th scope="col">Numero Interior</th>
+      <th scope="col">Numero Exterior</th>
+      <th scope="col">Codigo Postal</th>
+      <th scope="col">Ciudad</th>
+      <th scope="col">Otros</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let sucursal of sucursales">
+      <th scope="row">{{ sucursal.id }}</th>
+      <td>{{ sucursal.nombre }}</td>
+      <td>{{ sucursal.calle }}</td>
+      <td>{{ sucursal.numint }}</td>
+      <td>{{ sucursal.numext }}</td>
+      <td>{{ sucursal.cp }}</td>
+      <td>{{ sucursal.municipio }}</td>
+      <td>
+        <a class="btn btn-outline-primary" routerLink="/editarsucursal/{{sucursal.id}}">Editar</a>
+         &nbsp;&nbsp; 
+        <a class="btn btn-outline-danger" (click)="borrarsucursal(sucursal.id)">Borrar</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+ <router-outlet></router-outlet>
+<br>

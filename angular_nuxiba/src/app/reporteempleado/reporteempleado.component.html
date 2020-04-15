@@ -1,0 +1,44 @@
+<br> 
+<br>
+<div class="page-header">
+  <h1>Empleados: <small>Reporte empleado.</small></h1>
+</div>
+<br>
+<a routerLink="/altaempleado" class="btn btn-primary ">Nuevo: Empleado(s).</a>
+<br>
+<br>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Password</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido Paterno</th>
+      <th scope="col">Apellido Materno</th>
+      <th scope="col">Otros</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let empleado of empleados">
+      <th scope="row">{{ empleado.id }}</th>
+      <td>{{ empleado.correo }}</td>
+      <td>{{ empleado.pass }}</td>
+      <!-- <td>{{ empleado.app }} {{ empleado.apm }}, {{ empleado.nombre }}</td> -->
+      <td>{{ empleado.nombre }}</td>
+      <td>{{ empleado.app }}</td>
+      <td>{{ empleado.apm }}</td>
+      
+      <td>
+        <a class="btn btn-outline-primary" routerLink="/editarempleado/{{empleado.id}}">Editar</a>
+         &nbsp;&nbsp; 
+        <a class="btn btn-outline-danger" (click)="borrarempleado(empleado.id)">Borrar</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+ <router-outlet></router-outlet>
+<br>

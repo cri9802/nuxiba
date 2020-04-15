@@ -1,0 +1,34 @@
+<div class="page-header">
+    <h1>Areas: <small>Alta.</small></h1>
+  </div>
+  
+  <form #areaForm="ngForm">
+  
+  
+    <div class="form-group">
+        <label for="inputnombre">Nombre</label>
+        <input type="text" class="form-control" name="nombre" id="inputnombre" placeholder="Coloca: Nombre (s)" [(ngModel)]="area.nombre">
+    </div> 
+  <br>
+  <br>
+  
+   
+  
+    <!-- <button type="submit" class="btn btn-primary">Sign in</button> -->
+    <button (click)="salvarArea()" class="btn btn-primary btn-lg btn-block">Guardar</button>
+    <br>
+    <br>
+    <a class="btn btn-secondary btn-danger" routerLink="/areas"> -- Atras -- </a>
+  
+  </form>
+  
+  <br>
+  <br>
+  <br>
+  
+  
+  
+  
+  
+  
+  

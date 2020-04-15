@@ -1,0 +1,77 @@
+<div class="page-header">
+  <h1>Sucursales: <small>Alta.</small></h1>
+</div>
+
+<form #sucursalForm="ngForm">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+        <label for="inputNombre">Nombre(s)</label>
+        <input type="text" class="form-control" name="nombre" id="inputNombre" placeholder="Coloca: Nombre" [(ngModel)]="sucursal.nombre">
+    </div> 
+    <br>
+    <div class="form-group col-md-6">
+        <label for="inputcalle">Calle</label>
+        <input type="text" class="form-control" name="calle" id="inputcalle" placeholder="Coloca: Calle" [(ngModel)]="sucursal.calle">
+    </div>
+    <br>
+    <div class="form-group col-md-3">
+        <label for="inputnumint">Numero Interior</label>
+        <input type="text" class="form-control" name="numint" id="inputnumint" placeholder="Coloca: Numero Interior" [(ngModel)]="sucursal.numint">
+    </div>
+    <br>
+    <div class="form-group col-md-3">
+        <label for="inputnumext">Numero Exterior</label>
+        <input type="text" class="form-control" name="numext" id="numext" placeholder="Coloca: Numero Exterior" [(ngModel)]="sucursal.numext">
+    </div>
+    <br>
+    <div class="form-group col-md-6">
+        <label for="inputcp">Codigo Postal</label>
+        <input type="text" class="form-control" name="cp" id="cp" placeholder="Coloca: Codigo Potal" [(ngModel)]="sucursal.cp">
+    </div>
+  </div>
+  
+  <div class="form-group">
+      <label for="inputestado">Estado</label>
+      <select  id="inputestado" name='estado' class="form-control" [(ngModel)]="sucursal.estado">
+        <option value="1">Estado de Mexico</option>
+        <option value="2">CDMX</option>
+        <option value="3">Puebla</option>
+        <option value="4">Queretaro</option>
+        <option value="5">QUintana Roo</option>
+        <option value="6">Aguascalientes</option>
+        <option value="7">Guerrero</option>
+        <option value="8">Michoacan</option>
+        <option value="9">Hidalgo</option>
+        <option value="10">Nuevo Leon</option>
+        <option value="11">Durango</option>
+        <option value="12">Veracruz</option>
+        <option value="13">Jalisco</option>
+        <option value="14">San Luis</option>
+        <option value="15">Oaxaca</option>
+        <option value="16">Chiapas</option>
+      </select>
+    </div>
+
+  <div class="form-group">
+      <label for="inputmunicipio">Municipio</label>
+      <input type="text" class="form-control" name="municipio" id="inputmunicipio" placeholder="Coloca: Municipio" [(ngModel)]="sucursal.municipio">
+  </div>  
+ 
+
+  <!-- <button type="submit" class="btn btn-primary">Sign in</button> -->
+  <button (click)="salvarSucursal()" class="btn btn-primary btn-lg btn-block">Guardar</button>
+  <br>
+  <br>
+  <a class="btn btn-secondary btn-danger" routerLink="/sucursales"> -- Atras -- </a>
+
+</form>
+
+<br>
+<br>
+<br>
+
+
+
+
+
+
